@@ -1,0 +1,34 @@
+Mar  5 08:12:01 srv-web-01 sshd[11023]: Failed password for root from 203.0.113.42 port 54312 ssh2
+Mar  5 08:12:04 srv-web-01 sshd[11023]: Failed password for root from 203.0.113.42 port 54312 ssh2
+Mar  5 08:12:06 srv-web-01 sshd[11023]: Failed password for root from 203.0.113.42 port 54312 ssh2
+Mar  5 08:12:09 srv-web-01 sshd[11023]: Connection closed by authenticating user root 203.0.113.42 port 54312 [preauth]
+Mar  5 08:15:33 srv-web-01 sshd[11087]: Accepted publickey for admin from 10.0.0.5 port 49210 ssh2
+Mar  5 08:15:33 srv-web-01 sshd[11087]: pam_unix(sshd:session): session opened for user admin(uid=1001) by (uid=0)
+Mar  5 08:17:45 srv-web-01 sudo: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/cat /var/log/syslog
+Mar  5 09:01:12 srv-web-01 sshd[11342]: Failed password for invalid user test from 198.51.100.17 port 38201 ssh2
+Mar  5 09:01:15 srv-web-01 sshd[11342]: Failed password for invalid user admin from 198.51.100.17 port 38201 ssh2
+Mar  5 09:01:18 srv-web-01 sshd[11342]: Failed password for invalid user guest from 198.51.100.17 port 38201 ssh2
+Mar  5 09:01:21 srv-web-01 sshd[11342]: Failed password for invalid user ubuntu from 198.51.100.17 port 38201 ssh2
+Mar  5 09:01:24 srv-web-01 sshd[11342]: Failed password for invalid user deploy from 198.51.100.17 port 38201 ssh2
+Mar  5 09:01:27 srv-web-01 sshd[11342]: Connection closed by 198.51.100.17 port 38201 [preauth]
+Mar  5 09:30:00 srv-web-01 sshd[11501]: Accepted password for operator from 10.0.0.12 port 52100 ssh2
+Mar  5 09:30:00 srv-web-01 sshd[11501]: pam_unix(sshd:session): session opened for user operator(uid=1002) by (uid=0)
+Mar  5 09:45:22 srv-web-01 sudo: operator : TTY=pts/1 ; PWD=/home/operator ; USER=root ; COMMAND=/usr/sbin/iptables -L
+Mar  5 10:02:11 srv-web-01 sshd[11678]: Failed password for root from 203.0.113.42 port 55102 ssh2
+Mar  5 10:02:14 srv-web-01 sshd[11678]: Failed password for root from 203.0.113.42 port 55102 ssh2
+Mar  5 10:02:17 srv-web-01 sshd[11678]: Failed password for root from 203.0.113.42 port 55102 ssh2
+Mar  5 10:02:20 srv-web-01 sshd[11678]: Failed password for root from 203.0.113.42 port 55102 ssh2
+Mar  5 10:02:23 srv-web-01 sshd[11678]: Failed password for root from 203.0.113.42 port 55102 ssh2
+Mar  5 10:02:26 srv-web-01 sshd[11678]: Connection closed by authenticating user root 203.0.113.42 port 55102 [preauth]
+Mar  5 10:30:00 srv-web-01 CRON[11890]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+Mar  5 10:30:01 srv-web-01 CRON[11891]: (root) CMD (/usr/local/bin/backup.sh)
+Mar  5 10:30:45 srv-web-01 CRON[11890]: pam_unix(cron:session): session closed for user root
+Mar  5 11:15:03 srv-web-01 sshd[12010]: Accepted publickey for admin from 10.0.0.5 port 49500 ssh2
+Mar  5 11:15:03 srv-web-01 sshd[12010]: pam_unix(sshd:session): session opened for user admin(uid=1001) by (uid=0)
+Mar  5 11:20:18 srv-web-01 sudo: admin : TTY=pts/2 ; PWD=/var/log ; USER=root ; COMMAND=/usr/bin/less /var/log/auth.log
+Mar  5 14:05:44 srv-web-01 sshd[12456]: Failed password for root from 192.0.2.88 port 60100 ssh2
+Mar  5 14:05:47 srv-web-01 sshd[12456]: Failed password for root from 192.0.2.88 port 60100 ssh2
+Mar  5 14:05:50 srv-web-01 sshd[12456]: Failed password for invalid user postgres from 192.0.2.88 port 60100 ssh2
+Mar  5 14:05:53 srv-web-01 sshd[12456]: Connection closed by 192.0.2.88 port 60100 [preauth]
+Mar  5 15:00:00 srv-web-01 sshd[12601]: pam_unix(sshd:session): session closed for user admin
+Mar  5 15:00:00 srv-web-01 sshd[12602]: pam_unix(sshd:session): session closed for user operator

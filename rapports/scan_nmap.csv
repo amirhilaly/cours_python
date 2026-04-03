@@ -1,0 +1,26 @@
+host,port,protocol,state,service,version,info
+192.168.1.1,22,tcp,open,ssh,OpenSSH 8.9p1,Ubuntu 3ubuntu0.6
+192.168.1.1,80,tcp,open,http,nginx 1.18.0,Ubuntu
+192.168.1.1,443,tcp,open,https,nginx 1.18.0,Ubuntu
+192.168.1.1,3306,tcp,filtered,mysql,,
+192.168.1.10,22,tcp,open,ssh,OpenSSH 8.2p1,Ubuntu 4ubuntu0.11
+192.168.1.10,25,tcp,open,smtp,Postfix smtpd,
+192.168.1.10,110,tcp,open,pop3,Dovecot pop3d,
+192.168.1.10,143,tcp,open,imap,Dovecot imapd,
+192.168.1.10,587,tcp,open,submission,Postfix smtpd,
+192.168.1.20,22,tcp,open,ssh,OpenSSH 7.6p1,Ubuntu 4ubuntu0.7
+192.168.1.20,80,tcp,open,http,Apache httpd 2.4.29,(Ubuntu)
+192.168.1.20,8080,tcp,open,http-proxy,Apache Tomcat 9.0.31,
+192.168.1.20,8443,tcp,open,https-alt,Apache Tomcat 9.0.31,
+192.168.1.30,22,tcp,open,ssh,OpenSSH 8.9p1,Ubuntu 3ubuntu0.6
+192.168.1.30,5432,tcp,open,postgresql,PostgreSQL DB 14.10,
+192.168.1.30,6379,tcp,open,redis,Redis key-value store 7.0.15,
+192.168.1.40,22,tcp,open,ssh,OpenSSH 8.4p1,Debian 5+deb11u3
+192.168.1.40,53,tcp,open,domain,ISC BIND 9.16.44,Debian
+192.168.1.40,53,udp,open,domain,ISC BIND 9.16.44,Debian
+192.168.1.40,953,tcp,open,rndc,,
+192.168.1.50,22,tcp,closed,ssh,,
+192.168.1.50,80,tcp,closed,http,,
+192.168.1.50,139,tcp,open,netbios-ssn,Samba smbd 4.13.17,Debian
+192.168.1.50,445,tcp,open,microsoft-ds,Samba smbd 4.13.17,Debian
+192.168.1.50,3389,tcp,open,ms-wbt-server,xrdp 0.9.17,

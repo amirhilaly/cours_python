@@ -1,0 +1,35 @@
+Mar  5 00:00:01 srv-web-01 rsyslogd: [origin software="rsyslogd" swVersion="8.2112.0"] start
+Mar  5 00:00:01 srv-web-01 systemd[1]: Started System Logging Service.
+Mar  5 06:25:01 srv-web-01 CRON[8820]: (root) CMD (/usr/sbin/logrotate /etc/logrotate.conf)
+Mar  5 06:25:02 srv-web-01 logrotate[8821]: rotating /var/log/syslog
+Mar  5 06:25:02 srv-web-01 logrotate[8821]: rotating /var/log/auth.log
+Mar  5 07:00:00 srv-web-01 systemd[1]: Starting Daily apt download activities...
+Mar  5 07:00:12 srv-web-01 systemd[1]: apt-daily.service: Deactivated successfully.
+Mar  5 08:10:55 srv-web-01 kernel: [41823.112] device eth0 entered promiscuous mode
+Mar  5 08:11:02 srv-web-01 kernel: [41830.445] device eth0 left promiscuous mode
+Mar  5 08:12:01 srv-web-01 kernel: [41889.001] TCP: request_sock_TCP: Possible SYN flooding on port 22. Sending cookies.
+Mar  5 08:30:00 srv-web-01 CRON[11200]: (root) CMD (/usr/local/bin/check_services.sh)
+Mar  5 08:30:01 srv-web-01 check_services[11201]: nginx: active (running) since Tue 2025-03-04 12:00:00 UTC
+Mar  5 08:30:01 srv-web-01 check_services[11201]: postgresql: active (running) since Tue 2025-03-04 12:00:05 UTC
+Mar  5 08:30:01 srv-web-01 check_services[11201]: redis: active (running) since Tue 2025-03-04 12:00:10 UTC
+Mar  5 09:00:01 srv-web-01 CRON[11400]: (root) CMD (/usr/local/bin/check_services.sh)
+Mar  5 09:15:33 srv-web-01 kernel: [45701.234] Out of memory: Killed process 9102 (java) total-vm:2048000kB
+Mar  5 09:15:34 srv-web-01 systemd[1]: app-worker.service: Main process exited, code=killed, status=9/KILL
+Mar  5 09:15:35 srv-web-01 systemd[1]: app-worker.service: Scheduled restart job, restart counter is at 3.
+Mar  5 09:15:36 srv-web-01 systemd[1]: Started Application Worker Service.
+Mar  5 09:45:00 srv-web-01 kernel: [47468.891] [UFW BLOCK] IN=eth0 OUT= SRC=203.0.113.42 DST=10.0.0.1 PROTO=TCP SPT=44820 DPT=3306 LEN=60
+Mar  5 10:00:01 srv-web-01 CRON[11780]: (www-data) CMD (/usr/local/bin/clear_cache.sh)
+Mar  5 10:30:45 srv-web-01 kernel: [50213.556] disk sda: 1 read error detected, sector 145920
+Mar  5 10:30:46 srv-web-01 smartd[890]: Device: /dev/sda, 1 Currently unreadable (pending) sectors
+Mar  5 11:00:00 srv-web-01 systemd[1]: Starting Daily man-db regeneration...
+Mar  5 11:00:05 srv-web-01 systemd[1]: man-db.service: Deactivated successfully.
+Mar  5 12:00:00 srv-web-01 CRON[12100]: (root) CMD (/usr/local/bin/check_services.sh)
+Mar  5 12:00:01 srv-web-01 check_services[12101]: nginx: active (running)
+Mar  5 12:00:01 srv-web-01 check_services[12101]: postgresql: active (running)
+Mar  5 12:00:01 srv-web-01 check_services[12101]: redis: inactive (dead) since Wed 2025-03-05 11:58:42 UTC
+Mar  5 12:00:02 srv-web-01 check_services[12101]: WARNING: redis is not running, attempting restart
+Mar  5 12:00:03 srv-web-01 systemd[1]: Starting Redis Server...
+Mar  5 12:00:04 srv-web-01 systemd[1]: Started Redis Server.
+Mar  5 14:05:40 srv-web-01 kernel: [63108.773] TCP: request_sock_TCP: Possible SYN flooding on port 22. Sending cookies.
+Mar  5 15:00:00 srv-web-01 CRON[12800]: (root) CMD (/usr/local/bin/check_services.sh)
+Mar  5 15:00:01 srv-web-01 check_services[12801]: All services running normally.

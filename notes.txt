@@ -1,0 +1,33 @@
+Investigation #42 - Activite suspecte sur srv-web-01
+Date : 2025-03-05
+Analyste : operator
+
+Chronologie des evenements
+--------------------------
+08:12 - Premiere serie de tentatives de brute-force SSH depuis 203.0.113.42
+       Cible : compte root (3 tentatives, echec)
+08:15 - Connexion legitime de admin depuis 10.0.0.5 (cle publique)
+09:01 - Deuxieme source de brute-force detectee : 198.51.100.17
+       Tentatives sur comptes : test, admin, guest, ubuntu, deploy (tous invalides)
+09:15 - OOM killer declenche, processus java (app-worker) tue
+       Redis tombe a 11:58, redemarre automatiquement a 12:00
+09:45 - Tentative de connexion de 203.0.113.42 sur le port 3306 (MySQL) bloquee par UFW
+10:02 - Retour de 203.0.113.42, nouvelle serie de brute-force SSH (5 tentatives, echec)
+14:05 - Nouvelle source suspecte : 192.0.2.88
+       Tentatives SSH + scan de ports (445, 8080) + ICMP + DNS
+
+IP suspectes identifiees
+------------------------
+203.0.113.42  - Brute-force SSH repete (8 tentatives) + scan de ports DB
+198.51.100.17 - Brute-force SSH avec enumeration de comptes (5 tentatives)
+192.0.2.88    - Brute-force SSH + scan multi-protocoles (TCP, ICMP, UDP)
+
+Actions recommandees
+--------------------
+[x] Bloquer 203.0.113.42 au niveau du pare-feu
+[x] Bloquer 198.51.100.17 au niveau du pare-feu
+[ ] Bloquer 192.0.2.88 au niveau du pare-feu
+[ ] Installer fail2ban pour limiter les tentatives SSH
+[ ] Verifier la configuration de Redis (authentification)
+[ ] Investiguer le OOM kill du processus java
+[ ] Mettre a jour OpenSSH sur 192.168.1.20 (CVE-2024-6387)

@@ -1,0 +1,106 @@
+{
+  "scan_id": "SCAN-2025-0042",
+  "date": "2025-03-05T08:30:00Z",
+  "analyst": "operator",
+  "target": "192.168.1.0/24",
+  "scope": "Internal network audit",
+  "summary": {
+    "hosts_scanned": 50,
+    "hosts_up": 5,
+    "total_vulnerabilities": 8,
+    "critical": 1,
+    "high": 2,
+    "medium": 3,
+    "low": 2
+  },
+  "vulnerabilities": [
+    {
+      "id": "VULN-001",
+      "severity": "critical",
+      "cvss": 9.8,
+      "cve": "CVE-2024-6387",
+      "title": "OpenSSH regreSSHion - Remote Code Execution",
+      "host": "192.168.1.20",
+      "port": 22,
+      "description": "OpenSSH 7.6p1 est vulnerable a une execution de code a distance via une race condition dans le gestionnaire de signaux.",
+      "remediation": "Mettre a jour OpenSSH vers la version 9.8 ou superieure."
+    },
+    {
+      "id": "VULN-002",
+      "severity": "high",
+      "cvss": 8.1,
+      "cve": "CVE-2023-44487",
+      "title": "HTTP/2 Rapid Reset - Denial of Service",
+      "host": "192.168.1.1",
+      "port": 443,
+      "description": "Le serveur nginx 1.18.0 est vulnerable a l'attaque HTTP/2 Rapid Reset permettant un deni de service.",
+      "remediation": "Mettre a jour nginx vers la version 1.25.3 ou superieure."
+    },
+    {
+      "id": "VULN-003",
+      "severity": "high",
+      "cvss": 7.5,
+      "cve": null,
+      "title": "Redis accessible sans authentification",
+      "host": "192.168.1.30",
+      "port": 6379,
+      "description": "Le serveur Redis ecoute sur toutes les interfaces sans mot de passe configure. Un attaquant peut lire et modifier les donnees.",
+      "remediation": "Configurer requirepass dans redis.conf et restreindre le bind a 127.0.0.1."
+    },
+    {
+      "id": "VULN-004",
+      "severity": "medium",
+      "cvss": 6.5,
+      "cve": null,
+      "title": "Apache Tomcat - Manager accessible",
+      "host": "192.168.1.20",
+      "port": 8080,
+      "description": "L'interface Tomcat Manager est accessible depuis le reseau avec des identifiants par defaut (tomcat/tomcat).",
+      "remediation": "Desactiver l'acces distant au Manager ou modifier les identifiants."
+    },
+    {
+      "id": "VULN-005",
+      "severity": "medium",
+      "cvss": 5.9,
+      "cve": null,
+      "title": "Samba - Partage ouvert en lecture",
+      "host": "192.168.1.50",
+      "port": 445,
+      "description": "Un partage Samba 'public' est accessible en lecture anonyme et contient des documents internes.",
+      "remediation": "Restreindre l'acces au partage avec une authentification."
+    },
+    {
+      "id": "VULN-006",
+      "severity": "medium",
+      "cvss": 5.3,
+      "cve": null,
+      "title": "xRDP expose sur le reseau interne",
+      "host": "192.168.1.50",
+      "port": 3389,
+      "description": "Le service xRDP est accessible depuis le reseau interne sans restriction IP.",
+      "remediation": "Restreindre l'acces via le pare-feu aux seuls postes d'administration."
+    },
+    {
+      "id": "VULN-007",
+      "severity": "low",
+      "cvss": 3.7,
+      "cve": null,
+      "title": "Version SSH obsolete",
+      "host": "192.168.1.10",
+      "port": 22,
+      "description": "OpenSSH 8.2p1 est en fin de support. Plusieurs correctifs de securite manquants.",
+      "remediation": "Mettre a jour vers la derniere version LTS d'OpenSSH."
+    },
+    {
+      "id": "VULN-008",
+      "severity": "low",
+      "cvss": 2.6,
+      "cve": null,
+      "title": "Serveur DNS autorise les transferts de zone",
+      "host": "192.168.1.40",
+      "port": 53,
+      "description": "Le serveur BIND autorise les transferts de zone (AXFR) sans restriction, exposant la topologie interne.",
+      "remediation": "Restreindre allow-transfer aux serveurs DNS secondaires uniquement."
+    }
+  ]
+}
