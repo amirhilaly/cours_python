@@ -1,6 +1,10 @@
 """
 Code python pour trié mon superbe bureau, et aussi pour avoir une todo bien pratique
 Amir HILALY
+
+Je laisse mes commentaires, même si vous avez explicitement dis que vous pensiez que les commentaires viennent d'IA,
+car ce sont MES commentaires. Ayant fait NSI en spé, le fait de commenter mon code python est encré en moi, je vous prierai de ne pas penser
+qu'une IA a fait mon code.
 """
 
 import os, sys
